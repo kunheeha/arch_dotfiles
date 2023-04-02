@@ -34,6 +34,8 @@ eval "$(pyenv init -)"
 
 # ALIASES
 
+# Change alacritty opacity
+alias opacity='python ~/.config/scripts/change_alacritty_opacity.py'
 # use Neovim
 alias vim='nvim'
 # pacman
