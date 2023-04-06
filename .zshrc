@@ -34,10 +34,6 @@ eval "$(pyenv init -)"
 
 # ALIASES
 
-# Change alacritty opacity
-alias opacity='python ~/.config/scripts/change_alacritty_opacity.py'
-# Change alacritty theme
-alias theme='python ~/.config/scripts/change_alacritty_theme.py'
 # use Neovim
 alias vim='nvim'
 # pacman
@@ -51,6 +47,19 @@ alias ll='lsd -la'
 alias lt='lsd --tree'
 # use ptsh cp for status bar
 # alias cp='ptcp'
+
+# Change aesthetics
+
+# Change alacritty opacity
+alias opacity='python ~/.config/scripts/change_alacritty_opacity.py'
+# Change alacritty theme
+alias theme='python ~/.config/scripts/change_alacritty_theme.py'
+# Default wallpaper
+alias wallpaper='~/.config/scripts/set_wallpaper.sh'
+# Change theme and opacity
+alias nord='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py nord'
+alias mocha='python ~/.config/scripts/change_alacritty_opacity.py 0.8 && python ~/.config/scripts/change_alacritty_theme.py cat'
+
 
 # Git
 alias gls='git worktree list'
