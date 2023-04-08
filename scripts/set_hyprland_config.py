@@ -29,7 +29,7 @@ elif chassis == 'laptop':
 
     if not match:
         f = open('/home/kunheeha/.config/hypr/hyprland.conf', 'a')
-        f.write('\nsource = ~/.config/hypr/macbook.conf')
+        f.write('source = ~/.config/hypr/macbook.conf')
         f.close()
 
 else:
