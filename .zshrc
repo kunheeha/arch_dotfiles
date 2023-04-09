@@ -83,6 +83,8 @@ alias gm='git merge'
 alias gmc='git merge --continue'
 alias gf='git fetch'
 alias gwa='git worktree add'
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 # Tmux
 alias tma='tmux attach -t'
