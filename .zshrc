@@ -32,6 +32,12 @@ export PYENV_ROOT="$HOME/.PYENV"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# OPTIONS
+export EDITOR='nvim'
+export BROWSER='firefox'
+# Case sensitive completion
+CASE_SENSITIVE='false'
+
 # ALIASES
 
 # use Neovim
@@ -89,3 +95,4 @@ alias screenrecord='wf-recorder -g "$(slurp)"'
 neofetch
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
