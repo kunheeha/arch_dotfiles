@@ -32,6 +32,9 @@ export PYENV_ROOT="$HOME/.PYENV"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# Watershot
+export PATH="/home/kunheeha/.cargo/bin:$PATH"
+
 # OPTIONS
 export EDITOR='nvim'
 export BROWSER='firefox'
