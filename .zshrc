@@ -95,7 +95,7 @@ alias tmn='tmux new -s'
 alias tls='tmux ls'
 
 # ScreenRecord
-alias screenrecord='wf-recorder -g "$(slurp)"'
+alias screenrecord='wf-recorder -g "$(slurp)" -f'
 
 neofetch
 
