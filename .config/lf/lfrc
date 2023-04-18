@@ -7,6 +7,7 @@ set previewer ~/.config/lf/pv.sh
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
+        audio/*) mpv "$f";;
         *) xdg-open "$f" ;;
     esac
 }}
