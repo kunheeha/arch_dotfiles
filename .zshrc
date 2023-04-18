@@ -98,6 +98,8 @@ alias tls='tmux ls'
 
 # ScreenRecord
 alias screenrecord='wf-recorder -g "$(slurp)" -f'
+# Music
+alias music="ncmpcpp"
 
 neofetch
 
