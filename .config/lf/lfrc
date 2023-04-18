@@ -1,0 +1,53 @@
+set hidden true
+set ignorecase true
+set icons true
+
+# mkdir function
+cmd mkdir ${{
+  printf "DirName: "
+  read ans
+  mkdir $ans
+}}
+
+# touch file and open it in editor
+cmd newfile ${{
+  printf "FileName: "
+  read ans
+  $EDITOR $ans
+}}
+
+# chmod file(s)
+cmd chmod ${{
+  printf "chmod: "
+  read ans
+
+  for file in "$fx"; do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+# change wallpaper
+cmd wallpaper ${{
+  swww img -t grow --transition-pos=top-left $f 
+}}
+
+# dragon file
+cmd dragon $ {{
+  dragon-drop -a -x $fx
+}}
+
+# Clear default mappings
+map d
+
+# Mappings
+map md mkdir
+map t newfile
+map ch chmod
+map dg dragon
+
+# Navigation
+map gp cd ~/Projects/
+map gc cd ~/.config/
+map gh cd ~/
