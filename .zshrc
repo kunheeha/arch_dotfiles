@@ -31,6 +31,8 @@ eval "$(nodenv init -)"
 export PYENV_ROOT="$HOME/.PYENV"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+# theFuck
+eval $(thefuck --alias)
 
 # Watershot
 export PATH="/home/kunheeha/.cargo/bin:$PATH"
