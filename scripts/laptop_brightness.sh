@@ -1,9 +1,20 @@
 #!/bin/bash
 
-if [[ "$1" == "down" ]]; then
-  brightnessctl s 10-
-elif [[ "$1" == "up" ]]; then
-  brightnessctl s +10
-fi
+send_brightness_notification ()
+{
+  BRIGHTNESS=$(brightnessctl g)
+  ICON="/usr/share/icons/Faba/48x48/notifications/notification-display-brightness.svg"
+  BRIGHTNESSBAR=$(seq -s "━" $(($BRIGHTNESS/5)) | sed 's/[0-9]//g')
+  notify-send -i "$ICON" "$BRIGHTNESS    $BRIGHTNESSBAR" "" -r 1
+}
 
-brightnessctl g | while read OUTPUT; do notify-send "Brighntess: $OUTPUT" -r 1; done;
+case "$1" in
+  up)
+    brightnessctl s +5
+    send_brightness_notification
+  ;;
+  down)
+    brightnessctl s 5-
+    send_brightness_notification
+  ;;
+esac
