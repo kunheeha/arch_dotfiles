@@ -20,6 +20,10 @@ if theme.lower() == 'cat' or theme.lower() == 'catppuccin':
     new = 'catppuccin'
 elif theme.lower() == 'nord':
     new = 'nord'
+elif theme.lower() == 'poimandres':
+    new = 'poimandres'
+elif theme.lower() == 'storm':
+    new = 'poimandres-storm'
 
 fdata = fdata.replace(to_replace, new)
 f.close()

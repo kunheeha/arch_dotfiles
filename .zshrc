@@ -70,6 +70,8 @@ alias wallpaper='~/.config/scripts/set_wallpaper.sh'
 # Change theme and opacity
 alias nord='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py nord'
 alias mocha='python ~/.config/scripts/change_alacritty_opacity.py 0.8 && python ~/.config/scripts/change_alacritty_theme.py cat'
+alias poi='python ~/.config/scripts/change_alacritty_opacity.py 0.9 && python ~/.config/scripts/change_alacritty_theme.py poimandres'
+alias storm='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py storm'
 
 
 # Git
