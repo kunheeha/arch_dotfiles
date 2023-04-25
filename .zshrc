@@ -43,6 +43,13 @@ export BROWSER='firefox'
 # Case sensitive completion
 CASE_SENSITIVE='false'
 
+# PLUGINS
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+
 # ALIASES
 
 # use Neovim
@@ -50,7 +57,7 @@ alias vim='nvim'
 # pacman
 alias pacman='sudo pacman'
 # use bat instead of cat
-alias cat='bat'
+# alias cat='bat'
 # use lsd instead of vanilla ls
 alias ls='lsd'
 alias la='lsd -a'
@@ -67,12 +74,14 @@ alias opacity='python ~/.config/scripts/change_alacritty_opacity.py'
 alias theme='python ~/.config/scripts/change_alacritty_theme.py'
 # Default wallpaper
 alias wallpaper='~/.config/scripts/set_wallpaper.sh'
-# Change theme and opacity
-alias nord='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py nord'
-alias mocha='python ~/.config/scripts/change_alacritty_opacity.py 0.8 && python ~/.config/scripts/change_alacritty_theme.py cat'
-alias poi='python ~/.config/scripts/change_alacritty_opacity.py 0.9 && python ~/.config/scripts/change_alacritty_theme.py poimandres'
-alias storm='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py storm'
 
+# Change theme and opacity
+alias nord='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py nord && python ~/.config/scripts/change_nvim_theme.py nord'
+alias mocha='python ~/.config/scripts/change_alacritty_opacity.py 0.8 && python ~/.config/scripts/change_alacritty_theme.py cat && python ~/.config/scripts/change_nvim_theme.py cat'
+alias kana='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py kana && python ~/.config/scripts/change_nvim_theme.py kana'
+
+alias poi='python ~/.config/scripts/change_alacritty_opacity.py 0.9 && python ~/.config/scripts/change_alacritty_theme.py poi'
+alias storm='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py storm'
 
 # Git
 alias gls='git worktree list'
@@ -105,6 +114,7 @@ alias music="ncmpcpp"
 
 neofetch
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+
+# zsh-history-substring-search keybinds
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
