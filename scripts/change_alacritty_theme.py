@@ -16,14 +16,26 @@ fdata = f.read()
 match = matcher.search(fdata)
 to_replace = match.group(1)
 
-if theme.lower() == 'cat' or theme.lower() == 'catppuccin':
-    new = 'catppuccin'
-elif theme.lower() == 'nord':
-    new = 'nord'
-elif theme.lower() == 'poimandres':
-    new = 'poimandres'
-elif theme.lower() == 'storm':
-    new = 'poimandres-storm'
+match theme.lower():
+    case 'cat':
+        new = 'catppuccin'
+    case 'nord':
+        new = 'nord'
+    case 'poi':
+        new = 'poimandres'
+    case 'storm':
+        new = 'poimandres-storm'
+    case 'kana':
+        new = 'kanagawa'
+
+#if theme.lower() == 'cat' or theme.lower() == 'catppuccin':
+#    new = 'catppuccin'
+#elif theme.lower() == 'nord':
+#    new = 'nord'
+#elif theme.lower() == 'poimandres':
+#    new = 'poimandres'
+#elif theme.lower() == 'storm':
+#    new = 'poimandres-storm'
 
 fdata = fdata.replace(to_replace, new)
 f.close()
