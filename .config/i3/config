@@ -53,7 +53,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym Print exec flameshot gui
 # Clipboard manager
 # Sound control
-bindsym $mod+Shift+s exec pavucontrol
+bindsym $mod+Shift+s exec "alacritty -e 'pulsemixer'"
 
 # Change focus hjkl
 bindsym $mod+h focus left
