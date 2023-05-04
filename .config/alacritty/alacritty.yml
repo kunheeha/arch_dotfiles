@@ -16,7 +16,7 @@ window:
 font:
   size: 12.0
   normal:
-    family: DroidSansM Nerd Font
+    family: Droid Sans Mono Nerd Font
       # family: Zapfino Extra LT Pro
     style: Regular
 
