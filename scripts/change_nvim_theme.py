@@ -27,6 +27,8 @@ match theme.lower():
         new = "SetColour('kanagawa')"
     case 'solar':
         new = "SetColour('neosolarized')"
+    case 'light':
+        new = "SetColour('solarized')"
 
 fdata = fdata.replace(to_replace, new)
 f.close()
