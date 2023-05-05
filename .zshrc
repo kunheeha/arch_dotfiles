@@ -80,6 +80,7 @@ alias nord='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~
 alias mocha='python ~/.config/scripts/change_alacritty_opacity.py 0.8 && python ~/.config/scripts/change_alacritty_theme.py cat && python ~/.config/scripts/change_nvim_theme.py cat'
 alias kana='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py kana && python ~/.config/scripts/change_nvim_theme.py kana'
 alias glacier='python ~/.config/scripts/change_alacritty_opacity.py 0.9 && python ~/.config/scripts/change_alacritty_theme.py cat && python ~/.config/scripts/change_nvim_theme.py glacier'
+alias solar='python ~/.config/scripts/change_alacritty_opacity.py 0.8 && python ~/.config/scripts/change_alacritty_theme.py solar && python ~/.config/scripts/change_nvim_theme.py solar && ~/.config/scripts/set_wallpaper.sh solar'
 
 alias poi='python ~/.config/scripts/change_alacritty_opacity.py 0.9 && python ~/.config/scripts/change_alacritty_theme.py poi'
 alias storm='python ~/.config/scripts/change_alacritty_opacity.py 1.0 && python ~/.config/scripts/change_alacritty_theme.py storm'

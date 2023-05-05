@@ -27,6 +27,8 @@ match theme.lower():
         new = 'poimandres-storm'
     case 'kana':
         new = 'kanagawa'
+    case 'solar':
+        new = 'solarized'
 
 #if theme.lower() == 'cat' or theme.lower() == 'catppuccin':
 #    new = 'catppuccin'
