@@ -1,0 +1,42 @@
+#[╾─╼]
+#[\[](black)
+#[\]](black)
+
+format = '''
+[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status
+[└───╼](black)$git_commit
+[▶ ](black)
+'''
+
+#[os]
+#format = '[$symbol ]'
+#[os.symbols]
+#Arch = '[](blue)'
+
+[directory]
+read_only = '  '
+read_only_style = 'black'
+format = '[$read_only]($read_only_style)[\[](black)[$path](blue)[\]](black)'
+
+[username]
+format = '[\[](black)[$user](blue)[\]](black)'
+show_always = false
+
+[git_branch]
+format = '[╾─╼](black)[\[](black)[$symbol$branch](blue)[\]](black)'
+
+[git_status]
+format = '[\[](black)[$all_status$ahead_behind](blue)[\]](black)'
+
+[git_commit]
+only_detached = true
+tag_disabled = false
+format = '[\[](black)[$hash$tag](green)[\]](black)'
+
+[git_state]
+format = '[\[](black)[$state($progress_current/$progress_total)](yellow)[\]](black)'
+
+[python]
+format = '[\[](black)[$symbol$version$virtualenv]($blue)[\]](black)'
+version_format = 'v${raw}'
+symbol = '[](blue) '
