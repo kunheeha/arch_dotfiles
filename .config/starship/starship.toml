@@ -3,8 +3,8 @@
 #[\]](black)
 
 format = '''
-[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status
-[└───╼](black)$git_commit
+[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$python
+[└────](black)$git_commit$git_state
 [▶ ](black)
 '''
 
@@ -31,12 +31,12 @@ format = '[\[](black)[$all_status$ahead_behind](blue)[\]](black)'
 [git_commit]
 only_detached = true
 tag_disabled = false
-format = '[\[](black)[$hash$tag](green)[\]](black)'
+format = '[╾╼](black)[\[](black)[$hash$tag](green)[\]](black)'
 
 [git_state]
-format = '[\[](black)[$state($progress_current/$progress_total)](yellow)[\]](black)'
+format = '[╾╼](black)[\[](black)[$state($progress_current/$progress_total)](yellow)[\]](black)'
 
 [python]
-format = '[\[](black)[$symbol$version$virtualenv]($blue)[\]](black)'
+format = '[╾─╼](black)[\[](black)[$symbol$version$virtualenv]($blue)[\]](black)'
 version_format = 'v${raw}'
 symbol = '[](blue) '
