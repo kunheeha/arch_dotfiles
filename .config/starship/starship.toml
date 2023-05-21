@@ -3,7 +3,7 @@
 #[\]](black)
 
 format = '''
-[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$python
+[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$fill$python
 [└────](black)$git_commit$git_state
 [▶ ](black)
 '''
@@ -12,6 +12,9 @@ format = '''
 #format = '[$symbol ]'
 #[os.symbols]
 #Arch = '[](blue)'
+
+[fill]
+symbol = ' '
 
 [directory]
 read_only = '  '
@@ -38,6 +41,6 @@ format = '[╾╼](black)[\[](black)[$hash$tag](green)[\]](black)'
 format = '[╾╼](black)[\[](black)[$state($progress_current/$progress_total)](yellow)[\]](black)'
 
 [python]
-format = '[╾─╼](black)[\[](black)[$symbol$version$virtualenv]($blue)[\]](black)'
+format = '[\[](black)[$symbol$version$virtualenv]($blue)[\]](black)'
 version_format = 'v${raw}'
 symbol = '[](blue) '
