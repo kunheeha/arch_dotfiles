@@ -17,6 +17,7 @@ format = '''
 read_only = '  '
 read_only_style = 'black'
 format = '[$read_only]($read_only_style)[\[](black)[$path](blue)[\]](black)'
+truncate_to_repo = false
 
 [username]
 format = '[\[](black)[$user](blue)[\]](black)'
