@@ -3,7 +3,7 @@
 #[\]](black)
 
 format = '''
-[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$fill$python
+[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$fill$python$nodejs
 [└────](black)$git_commit$git_state
 [▶ ](black)
 '''
@@ -44,3 +44,8 @@ format = '[╾╼](black)[\[](black)[$state($progress_current/$progress_total)](
 format = '[\[](black)[$symbol$version$virtualenv]($blue)[\]](black)'
 version_format = 'v${raw}'
 symbol = '[](blue) '
+
+[nodejs]
+format = '[\[](black)[$symbol$version]($blue)[\]](black)'
+version_format = 'v${raw}'
+symbol = '[󰎙](green) '
