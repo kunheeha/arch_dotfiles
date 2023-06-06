@@ -30,6 +30,8 @@ export EDITOR='nvim'
 export BROWSER='firefox'
 # Case sensitive completion
 CASE_SENSITIVE='false'
+# Hidden files when using fzf
+export FZF_DEFAULT_COMMAND="find \! \( -path '*/.git' -prune \) -printf '%P\n'"
 
 # PLUGINS
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
