@@ -3,7 +3,7 @@
 #[\]](black)
 
 format = '''
-[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$fill$python$nodejs
+[┌─ ](black)[ ](blue)[─╼](black)$directory$git_branch$git_status$fill$python$nodejs$golang
 [└────](black)$git_commit$git_state
 [▶ ](black)
 '''
@@ -49,3 +49,8 @@ symbol = '[](blue) '
 format = '[\[](black)[$symbol$version]($blue)[\]](black)'
 version_format = 'v${raw}'
 symbol = '[󰎙](green) '
+
+[golang]
+format = '[\[](black)[$symbol$version]($blue)[\]](black)'
+version_format = 'v${raw}'
+symbol = '[](cyan) '
