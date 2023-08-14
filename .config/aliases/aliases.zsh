@@ -86,12 +86,17 @@ alias screenrecord='wf-recorder -g "$(slurp)" -f'
 # Music
 alias music="ncmpcpp"
 
+# Redshift
+alias night="nohup gammastep -O 4500K &"
+
 # ##################
 # DEVICES
 # ##################
 # Rotate monitor 90 degrees
 alias rotate='~/.config/scripts/rotate.sh'
 
+# List bluetooth connections
+alias blueds='bluetoothctl devices Connected'
 
 # Airpods
 alias airpods='bluetoothctl connect 40:E6:4B:84:22:17'
