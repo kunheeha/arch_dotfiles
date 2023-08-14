@@ -89,6 +89,9 @@ alias music="ncmpcpp"
 # ##################
 # DEVICES
 # ##################
+# Rotate monitor 90 degrees
+alias rotate='~/.config/scripts/rotate.sh'
+
 
 # Airpods
 alias airpods='bluetoothctl connect 40:E6:4B:84:22:17'
