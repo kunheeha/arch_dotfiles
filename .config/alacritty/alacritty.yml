@@ -7,7 +7,7 @@ shell:
   program: /bin/zsh
 
 window:
-  opacity: 0.9
+  opacity: 1.0
   padding:
     x: 20
     y: 16
