@@ -14,7 +14,7 @@ alias vim='nvim'
 # pacman
 alias pacman='sudo pacman'
 # Quick Navigation
-alias projects='cd ~/Projects'
+alias p='cd ~/Projects'
 # use lsd instead of vanilla ls
 alias ls='lsd'
 alias la='lsd -a'
