@@ -65,6 +65,7 @@ alias gm='git merge'
 alias gmc='git merge --continue'
 alias gf='git fetch'
 alias gwa='git worktree add'
+alias gwd='pwd | xargs ~/.config/scripts/git_worktree_remove_current.sh; cd ..'
 alias gd='git diff'
 alias gdc='git diff --cached'
 
