@@ -54,6 +54,8 @@ bindkey '^[[B' history-substring-search-down
 source ~/.config/aliases/aliases.zsh
 source ~/.config/aliases/ssh_aliases.zsh
 
+fastfetch
+
 # Starship Prompt
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
