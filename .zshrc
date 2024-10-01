@@ -19,6 +19,8 @@ eval "$(nodenv init -)"
 export PYENV_ROOT="$HOME/.PYENV"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+# Pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
 # Goenv
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
