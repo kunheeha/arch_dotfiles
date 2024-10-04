@@ -54,6 +54,7 @@ bindkey '^[[B' history-substring-search-down
 # ALIASES
 source ~/.config/aliases/aliases.zsh
 source ~/.config/aliases/ssh_aliases.zsh
+source ~/.config/aliases/project_aliases.zsh
 
 fastfetch
 
