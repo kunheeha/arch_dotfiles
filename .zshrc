@@ -13,6 +13,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Use neovim as main
+export EDITOR=nvim
+
 # Nodenv
 eval "$(nodenv init -)"
 # Pyenv
