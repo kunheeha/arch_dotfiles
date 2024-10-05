@@ -19,8 +19,9 @@ export EDITOR=nvim
 # Nodenv
 eval "$(nodenv init -)"
 # Pyenv
-export PYENV_ROOT="$HOME/.PYENV"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 # Pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
