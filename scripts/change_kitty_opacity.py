@@ -6,10 +6,10 @@ if len(sys.argv) < 2:
 else:
     new = float(sys.argv[1])
 
-f = open('/home/kunheeha/.config/alacritty/alacritty.yml', 'r')
+f = open('/home/kunheeha/.config/kitty/kitty.conf', 'r')
 
 matcher = re.compile(r'''
-                     opacity:\s\d+\.?\d+
+                     background_opacity\s\d\.?\d+
                      ''', re.VERBOSE)
 fdata = f.read()
 match = matcher.search(fdata)
@@ -17,6 +17,6 @@ to_replace = match.group(0).strip()
 fdata = fdata.replace(to_replace, f'opacity: {new}')
 f.close()
 
-f = open('/home/kunheeha/.config/alacritty/alacritty.yml', 'w')
+f = open('/home/kunheeha/.config/kitty/kitty.conf', 'w')
 f.write(fdata)
 f.close()

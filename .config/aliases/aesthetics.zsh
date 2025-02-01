@@ -2,7 +2,7 @@
 alias wallpaper='~/.config/scripts/set_wallpaper.sh'
 
 # Change alacritty opacity
-alias opacity='python ~/.config/scripts/change_alacritty_opacity.py'
+alias opacity='python ~/.config/scripts/change_kitty_opacity.py'
 
 # Change alacritty theme
 alias theme='python ~/.config/scripts/change_alacritty_theme.py'
