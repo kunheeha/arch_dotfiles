@@ -1,4 +1,4 @@
-import = ["/home/kunheeha/.config/alacritty/rose.toml"]
+import = ["/home/kunheeha/.config/alacritty/nord-light.toml"]
 live_config_reload = true
 
 [cursor]

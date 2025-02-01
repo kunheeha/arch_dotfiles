@@ -1,0 +1,47 @@
+{
+  // Options
+  "layer": "top",         // Waybar at top layer
+  "position": "bottom",   // Waybar position (top|bottom|left|right)
+  "height": 40,           // Waybar height (to be removed for auto height)
+  "spacing": 4,           // Gaps between modules (4px)
+  // Left Modules
+  "modules-left": [
+    "custom/wallpaper",
+    "wlr/workspaces"
+  ],
+  // Centre Modules
+  "modules-center": [
+    ""
+  ],
+  // Right Modules
+  "modules-right": [
+    ""
+  ],
+
+  //Modules
+
+  // Workspaces
+  "wlr/workspaces": {
+    "format": "{icon}",
+    "on_click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "urgent": "",
+    },
+    "sort-by-number": true
+  },
+
+  // Wallpaper
+  "custom/wallpaper": {
+    "format": "",
+    "on-click": "~/.config/scripts/set_wallpaper.sh"
+  }
+}

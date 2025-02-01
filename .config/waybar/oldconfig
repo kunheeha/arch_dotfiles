@@ -1,0 +1,215 @@
+{
+    "layer": "top", 						// Waybar at top layer
+    "position": "bottom", 					// Waybar position (top|bottom|left|right)
+    "height": 45, 							// Waybar height (to be removed for auto height)
+    "spacing": 0, 							// Gaps between modules (4px)
+    "gtk-layer-shell": true,
+    "fixed-center": true,
+    
+    // # LEFT MODULES #
+    // #______________#
+    "modules-left": [
+    "custom/wofi_launcher", 
+    "wlr/workspaces", 
+    "wlr/taskbar"
+    ],
+    
+    // # CENTER MODULES #
+    // #________________#
+    //"modules-center": ["wlr/taskbar"],
+    
+    // # RIGHT MODULES #
+    // #_______________#
+    "modules-right": [
+		"temperature", 
+		"cpu", 
+		"memory", 
+		//"pulseaudio", 
+		//"pulseaudio#microphone", 
+		"backlight", 
+		"battery", 
+		"hyprland/language", 
+		"clock", 
+		"tray"
+		//"custom/power_btn"
+    ],
+    
+    // # MODULES # :
+    // #_________#
+    
+    // Launcher :
+    "custom/wofi_launcher": {
+        "format": "",
+        "on-click": "rofi -show drun -theme ~/.config/waybar/rofi/config.rasi",
+        "tooltip": false
+    },
+    
+    // Workspaces :
+	"wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+         "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "urgent": "",
+        }
+    },
+    
+	// Windows :
+    "hyprland/window": {
+        "format": "{}"
+    },
+
+	// Taskbar :
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 30,
+        "tooltip-format": "{title}",
+        "icon-theme" : "Papirus-Dark",
+        "on-click": "activate",
+        "on-click-right": "minimize",
+        //"on-click-right": "close",
+    },
+    
+    // Temperature :
+    "temperature": {
+        "thermal-zone": 1,
+        "format": "<span color=\"#8CA1a5\"></span> {temperatureC}°C",
+        "critical-threshold": 80,
+        "format-critical": "<span color=\"#8CA1a5\"></span> {temperatureC}°C",
+        "tooltip": false,
+        "max-length": 10,
+    },
+    
+    // CPU :
+    "cpu": {
+        "format": "<span color=\"#8CA1a5\"></span> {usage}%",
+        "tooltip": true,
+        "max-length": 10,
+    },
+ 
+    // Memory :
+    "memory": {
+        "format": "<span color=\"#8CA1a5\"></span> {used:0.1f} GB",
+        "tooltip": false,
+        "max-length": 10,
+    },
+    
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "<span color=\"#8CA1a5\"></span>",
+        "on-click": "pamixer -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+				"<span color=\"#8CA1a5\"></span>", 
+				"<span color=\"#8CA1a5\"></span>", 
+				"<span color=\"#8CA1a5\"></span>"
+            ]
+        }
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "<span color=\"#8CA1a5\"></span> {volume}%",
+        "format-source-muted": "<span color=\"#8CA1a5\"></span>",
+        "on-click": "pamixer --default-source -t",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+    
+    // Brightness :
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+        "format-icons": [
+			"<span color=\"#8CA1a5\"> </span>", 
+			"<span color=\"#8CA1a5\"> </span>", 
+			"<span color=\"#8CA1a5\"> </span>"
+        ]
+    },
+
+    // Battery :
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 50,
+            "critical": 20
+        },
+        "format": " {icon}",
+        "format-charging": "<span color=\"#8CA1a5\">  </span> {capacity}%",
+        "format-plugged": "<span color=\"#8CA1a5\">  </span> {capacity}%",
+        "format-alt": "{icon} {capacity}%",
+        "format-icons": [
+        "<span color=\"#8CA1a5\"> </span>", 
+        "<span color=\"#8CA1a5\"> </span>", 
+        "<span color=\"#8CA1a5\"> </span>", 
+        "<span color=\"#8CA1a5\"> </span>", 
+        "<span color=\"#8CA1a5\"> </span>"
+        ]
+        
+        //"format-icons": [
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>", 
+		//	"<span color=\"#8CA1a5\"> </span>"
+        //]
+    },
+    
+    // Keyboard Layouts :
+	"hyprland/language": {
+		"format": "{}",
+		"format-fr": "🇫🇷",
+		"format-ar": "🇩🇿"
+	},
+    
+    // Clock :
+    "clock": {
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "<span color=\"#8CA1a5\"></span> {:%H : %M}",
+        "tooltip-format": "{:%A %d %B | %H:%M}",
+        //"format-alt": "<span color=\"#8CA1a5\"></span> {:%A %d %B | %H:%M}"
+    },
+  
+	// Systray :
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 20
+    },
+    
+    "custom/power_btn": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
+    },
+
+}

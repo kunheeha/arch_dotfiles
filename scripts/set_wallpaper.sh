@@ -14,9 +14,11 @@ elif [[ "$1" == 'animated' ]]; then
   WALLDIR=$WALLDIR/animated
 elif [[ "$1" == 'rose' ]]; then
   WALLDIR=$WALLDIR/Rose
+elif [[ "$1" == 'old' ]]; then
+  WALLDIR=$WALLDIR/Old
 else
   WALLDIR=$(find $WALLDIR -maxdepth 1 -type d | tail -n 2 | sort -R | tail -n 1)
 fi
 
 WALLPAPER=$(ls $WALLDIR/ | sort -R | tail -n 1)
-swww img $WALLDIR/$WALLPAPER -t random
+swww img $WALLDIR/$WALLPAPER -t random --resize crop

@@ -1,0 +1,176 @@
+*{
+	border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+	font-family: "Droid Sans Mono Nerd Font";
+    font-size: 16px;
+    /*font-weight: bold;*/
+    /*min-height: 20px;*/
+}
+
+/* # window # */
+/* #________#*/
+window#waybar {
+    background-color: rgba(26, 32, 38, 0.6);
+    color: #cecece;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* # TOOLTIP # */
+/* #_________#*/
+tooltip {
+    background-color: #232b33;
+    opacity: 0.8;
+}
+tooltip label{
+    color: #cecece;
+}
+
+/* # BUTTON # */
+/* #________#*/
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+/* # WOFI LAUNCHER # */
+/* #_______________#*/
+#custom-wofi_launcher {
+	font-family: "JetBrainsMono Nerd Font";
+	font-size: 22px;
+    color: #8ca1a5;
+    margin: 4px;
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+/* # WORKSPACES # */
+/* #____________#*/
+#workspaces {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 4px;
+}
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+label:focus {
+    background-color: #000000;
+}
+
+/* # WORKSPACES BUTTON # */
+/* #___________________#*/
+#workspaces button {
+    color: #232b33;
+    margin: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+#workspaces button.active {
+	background: rgba(35, 43, 51, 0.4);
+    color: #8ca1a5;
+    border-radius: 5px;
+}
+#workspaces button.focused {
+    background: #eba0ac;
+    color: #cecece;
+    border-radius: 5px;
+}
+#workspaces button.urgent {
+    color: #cecece;
+    background: #cc6666;
+    border-radius: 5px;
+}
+#workspaces button:hover {
+    background: #232b33;
+    color: #b5bd68;
+    border-radius: 5px;
+}
+
+/* # TASKBAR # */
+/* #_________#*/
+#taskbar button {
+	color: #cecece;
+    border-radius: 5px;
+    margin: 4px;
+}
+#taskbar button.active {
+    background-color: rgba(35, 43, 51, 0.4);
+    border-radius: 5px;
+}
+#taskbar button:hover {
+    background-color: #232b33;
+    border-radius: 5px;
+}
+
+/* # BACKLIGHT # */
+/* #___________#*/
+#backlight {
+	font-family: "Roboto","JetBrainsMono Nerd Font";
+	font-size: 16px;
+}
+
+/* # BATTERY # */
+/* #_________#*/
+#battery.charging, #battery.plugged {
+    color: #26a65b;
+}
+@keyframes blink {
+    to {
+        background-color: #cecece;
+        color: #000000;
+    }
+}
+#battery.critical:not(.charging) {
+    margin: 4px;
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* # SYSTRAY # */
+/* #_________#*/
+#tray {
+    padding-right: 15px;
+}
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+/* # ALL STATUS CONFIG # */
+/* #____________________#*/
+#window,
+#temperature, #cpu, #memory, 
+#pulseaudio, #pulseaudio.microphone, #backlight, 
+#battery, #battery.charging, #battery.plugged, 
+#language, #clock ,#tray, #custom-power_btn {
+    background-color: rgba(35, 43, 51, 0.4);
+    color: #cecece;
+    border-radius: 5px;  
+	padding-left: 10px;
+	padding-right: 10px;                     
+    margin: 5px;                          
+}

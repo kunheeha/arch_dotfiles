@@ -96,6 +96,10 @@ alias night="nohup gammastep -O 4500K &"
 # Rotate monitor 90 degrees
 alias rotate='~/.config/scripts/rotate.sh'
 
+# Monitor scaling
+alias monitor1='hyprctl keyword monitor ,preferred,auto,1'
+alias monitor2='hyprctl keyword monitor ,preferred,auto,1.25'
+
 # List bluetooth connections
 alias blueds='bluetoothctl devices Connected'
 

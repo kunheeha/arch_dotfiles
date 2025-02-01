@@ -2,8 +2,8 @@ configuration {
   display-drun: "Applications:";
   display-calc: "";
   drun-display-format: "{name}";
-  font: "Droid Sans Mono Nerd Font 14";
-  modi: "run,drun,emoji,calc";
+  font: "Cascadia Code 16";
+  modi: "run,drun,";
   show-icons: true;
   icon-theme: "Papirus";
 }

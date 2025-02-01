@@ -21,7 +21,7 @@ font:
     style: Regular
 
 import:
-  - ~/.config/alacritty/catppuccin.yml
+  - ~/.config/alacritty/nord.yml
 
 
 cursor:
