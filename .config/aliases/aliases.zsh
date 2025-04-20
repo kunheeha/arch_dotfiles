@@ -28,8 +28,7 @@ alias fd='cd $(find * -type d | fzf)'
 # AESTHETICS
 # ##################
 
-# Wallpaper
-alias wallpaper='~/.config/scripts/set_wallpaper.sh'
+source ~/.config/aliases/aesthetics.zsh
 
 # ##################
 # GIT
