@@ -89,7 +89,3 @@ alias blueds='bluetoothctl devices Connected'
 
 # Switch US-GB keyboard
 alias switchkb='hyprctl switchxkblayout hhkb-hybrid_1-keyboard next'
-
-# Airpods
-alias airpods='bluetoothctl connect 40:E6:4B:84:22:17'
-alias airpodsoff='bluetoothctl disconnect 40:E6:4B:84:22:17'
