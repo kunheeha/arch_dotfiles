@@ -11,3 +11,5 @@
 * brightnessctl
 * pamixer
 * fastfetch
+* librewolf
+* kitty
