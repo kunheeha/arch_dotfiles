@@ -10,3 +10,4 @@
 * brightnessctl
 * pamixer
 * fastfetch
+* librewolf
