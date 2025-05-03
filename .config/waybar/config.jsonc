@@ -1,0 +1,12 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    // Modules
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["battery"],
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+}
