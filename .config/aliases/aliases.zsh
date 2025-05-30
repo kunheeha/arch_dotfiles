@@ -84,6 +84,7 @@ alias rotate='~/.config/scripts/rotate.sh'
 # Monitor scaling
 alias monitor1='hyprctl keyword monitor ,preferred,auto,1'
 alias monitor2='hyprctl keyword monitor ,preferred,auto,1.25'
+alias monitor144='hyprctl keyword monitor ,2560x1440@143.98,auto,1'
 
 # List bluetooth connections
 alias blueds='bluetoothctl devices Connected'
