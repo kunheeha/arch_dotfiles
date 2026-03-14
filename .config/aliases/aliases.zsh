@@ -1,3 +1,6 @@
+# Reload zshrc
+alias reload='source ~/.zshrc'
+
 # ##################
 # OPENING FILES
 # ##################
@@ -13,17 +16,23 @@ alias vim='nvim'
 
 # pacman
 alias pacman='sudo pacman'
+
 # Quick Navigation
-alias p='cd ~/Projects'
+alias p='cd ~/Projects && cd $(find . -maxdepth 1 -type d | sed "s|./||" | grep -v "^\.$" | fzf)'
 alias notes='cd ~/Notes'
 alias dots='cd ~/dotfiles/arch_dotfiles/'
+alias today="vim ~/Notes/Todo/today.md"
+alias docs='cd ~/Documents/'
+
 # use lsd instead of vanilla ls
 alias ls='lsd'
 alias la='lsd -a'
 alias ll='lsd -la'
 alias lt='lsd --tree'
+
 # Changing directory using fzf
-alias fd='cd $(find * -type d | fzf)'
+alias fd='dir=$(ls -d */ | fzf --preview "ls {}") && cd "$dir"'
+
 # tmp notes
 alias tmp='cd ~/tmp && vim tmp'
 
