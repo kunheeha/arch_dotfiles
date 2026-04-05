@@ -19,4 +19,4 @@ else
 fi
 
 WALLPAPER=$(ls $WALLDIR/ | sort -R | tail -n 1)
-swww img $WALLDIR/$WALLPAPER -t random
+awww img $WALLDIR/$WALLPAPER -t random
